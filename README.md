@@ -1,55 +1,39 @@
-# flutter_hms_gms_availability
+<!--
+This README describes the package. If you publish this package to pub.dev,
+this README's contents appear on the landing page for your package.
 
-Based on the posting by @Salman Yakoob
-https://medium.com/@salman.yaqoob.1985
+For information about how to write a good package README, see the guide for
+[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
 
-Medium post
+For general information about developing packages, see the Dart guide for
+[creating packages](https://dart.dev/guides/libraries/create-library-packages)
+and the Flutter guide for
+[developing packages and plugins](https://flutter.dev/developing-packages).
+-->
 
-https://medium.com/huawei-developers/flutter-check-hms-gms-availability-10f06aeea387
+TODO: Put a short description of the package here that helps potential users
+know whether this package might be useful for them.
 
-## Example
+## Features
+
+TODO: List what your package can do. Maybe include images, gifs, or videos.
+
+## Getting started
+
+TODO: List prerequisites and provide or point to information on how to
+start using the package.
+
+## Usage
+
+TODO: Include short and useful examples for package users. Add longer examples
+to `/example` folder.
 
 ```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_hms_gms_availability/flutter_hms_gms_availability.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  bool gms = false, hms = false;
-
-  @override
-  void initState() {
-    super.initState();
-    FlutterHmsGmsAvailability.isGmsAvailable.then((t) {
-      setState(() {
-        gms = t;
-      });
-    });
-    FlutterHmsGmsAvailability.isHmsAvailable.then((t) {
-      setState(() {
-        hms = t;
-      });
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('HMS/GMS Availability'),
-        ),
-        body: Center(
-          child: Text('GMS Available:  $gms\nHMS Available:  $hms'),
-        ),
-      ),
-    );
-  }
-}
+const like = 'sample';
 ```
+
+## Additional information
+
+TODO: Tell users more about the package: where to find more information, how to
+contribute to the package, how to file issues, what response they can expect
+from the package authors, and more.
