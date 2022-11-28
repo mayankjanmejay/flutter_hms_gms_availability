@@ -13,6 +13,8 @@ class FlutterHmsGmsAvailability {
   static Future<bool?> get isHmsAvailable async {
     if (kIsWeb)
     {
+
+      return false;
       throw UnimplementedError(
         'Unable to detect GMS/ HMS on Flutter web. Please integrate FCM in /web flutter project'
       );     
@@ -24,6 +26,7 @@ class FlutterHmsGmsAvailability {
   static Future<bool?> get isGmsAvailable async {
     if (kIsWeb)
     {
+      return false;
       throw UnimplementedError(
         'Unable to detect GMS/ HMS on Flutter web. Please integrate FCM in /web flutter project'
       );     
