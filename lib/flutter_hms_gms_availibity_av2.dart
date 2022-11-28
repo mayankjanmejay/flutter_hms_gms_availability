@@ -21,7 +21,7 @@ class FlutterHmsGmsAvailability {
   }
 
 /// Check if GMS/ HMS is available for platform. Web check returns false & UnimplementedError()
-  static Future<bool> get isGmsAvailable async {
+  static Future<bool?> get isGmsAvailable async {
     if (kIsWeb)
     {
       throw UnimplementedError(
